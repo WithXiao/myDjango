@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.navigationview.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.example.navigationview.ui.home.HomeSecondFragment"
+        android:label="@string/home_second"
+        tools:layout="@layout/fragment_home_second">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.navigationview.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.navigationview.ui.login.loginFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/login_fragment" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.navigationview.ui.recyclerview.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/nav_recyclerview"
+        android:name="com.example.navigationview.ui.recyclerview.RecyclerViewFragment"
+        android:label="fragment_recyclerview"
+        tools:layout="@layout/fragment_recyclerview" />
+    <fragment
+        android:id="@+id/nav_viewpaper"
+        android:name="com.example.navigationview.ui.viewpaper.ViewPaperFragment"
+        android:label="fragment_viewpaper"
+        tools:layout="@layout/fragment_viewpaper" />
+    <fragment
+        android:id="@+id/nav_library"
+        android:name="com.example.navigationview.ui.library.LibraryFragment"
+        android:label="LibraryFragment" />
+    <fragment
+        android:id="@+id/nav_editbook"
+        android:name="com.example.navigationview.ui.library.EditBookFragment"
+        android:label="EditBookFragment" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.navigationview.ui.login.registerFragment"
+        android:label="register_fragment"
+        tools:layout="@layout/register_fragment" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.navigationview.MainActivity"
+        android:label="app_bar_main"
+        tools:layout="@layout/app_bar_main" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.navigationview.ui.gallery.aboutFragment"
+        android:label="aboutFragment" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.navigationview.ui.gallery.myFragment"
+        android:label="myFragment" />
+</navigation>

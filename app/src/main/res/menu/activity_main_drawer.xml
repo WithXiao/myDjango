@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_icon_224585"
+            android:title="首页" />
+        <item
+            android:id="@+id/nav_library"
+            android:icon="@drawable/user_icon_224512"
+            android:title="添加" />
+        <item
+            android:id="@+id/loginFragment"
+            android:icon="@drawable/login"
+            android:title="登陆" />
+        <item
+            android:id="@+id/registerFragment"
+            android:icon="@drawable/img"
+            android:title="注册" />
+
+        <item
+            android:id="@+id/nav_viewpaper"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="ViewPaper" />
+    </group>
+</menu>
